@@ -3,3 +3,72 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Common */
+html{
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1440px;
+    font-size: 10px;
+}
+body{
+    position: relative;
+}
+
+
+
+/* Navigation bar  */
+nav{}
+
+
+nav .menu-container{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 91.5vh;
+    width: 20%;
+    background-color: black;
+
+}
+.menu-logo{
+
+}
+.menu-button{
+
+}
+.menu-playlist{
+
+}
+.menu-profile{
+
+}
+
+/* Header */
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 8.5vh;
+    background-color: aquamarine;
+}
+
+/* Main */
+main{
+    position: absolute;
+    top: 8.5vh;
+    right: 0;
+    width: 80%;
+    height: 83vh;
+    background-color: blueviolet;
+}
+
+/* Footer */
+footer{
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 8.5vw;
+    width: 100%;
+    background-color: blue;
+}
