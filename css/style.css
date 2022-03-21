@@ -13,41 +13,135 @@ html{
 body{
     position: relative;
 }
-
+img{
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 
 
 /* Navigation bar  */
-nav{}
-
-
 nav .menu-container{
     position: fixed;
     display: flex;
     flex-direction: column;
-    height: 91.5vh;
-    width: 20%;
+    padding-left: 2em;
+    padding-top: 2.4em;
+  
+    width: 280px;
     background-color: black;
-
+    color: grey;
 }
+
+/* Menu logo */
 .menu-logo{
+    padding-bottom: 2.4em;
 
 }
+.menu-logo img{
+    width: 200px;
+    height: auto;
+}
+
+/* Menu button */
 .menu-button{
-
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: grey;
 }
+.menu-button ul li a{
+    color: inherit;
+}
+.menu-button ul li a img{
+    width: 3.5rem;
+    height: auto;
+    vertical-align: middle;
+}
+.menu-button ul li{
+    padding-bottom: 1rem;
+}
+
+/* Menu Playlist */
 .menu-playlist{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: gray;
 
 }
+.menu-playlist h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    padding-bottom: 1rem;
+}
+.menu-playlist button{
+    background-color: grey;
+    width: 45px;
+    height: 45px;
+    font-size: 4rem;
+    text-align: center;
+    border: none;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+.menu-playlist span{
+    font-size: 1.6rem;
+}
+.menu-playlist ul li{
+    padding-top: 2em;
+}
+.menu-playlist ul{
+    overflow: auto;
+}
+
+/* Menu Profile */
 .menu-profile{
-
+    color: grey;
+    align-self: flex-start;
+    font-size: 1.2rem;
+    width: 80%;
 }
+.menu-profile hr{
+ margin: 1rem 0rem;
+}
+.menu-profile #download{
+    padding-top: 16rem;
+}
+.menu-profile #download i{
+    border: 1px solid grey;
+    border-radius: 50%;
+    font-size: 1rem;
+    padding: 0.3rem;
+    margin-right: 1em;
+}
+
+.menu-profile #profile{
+    color: white;
+    padding: 1rem 0em;
+}
+.menu-profile #profile img{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    background-color: rgba(128, 128, 128, 0.664);
+    border-radius: 50%;
+}
+
+
+
+
 
 /* Header */
 header{
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
-    width: 80%;
+    width: calc(100% - 280px);
     height: 8.5vh;
     background-color: aquamarine;
 }
@@ -57,7 +151,7 @@ main{
     position: absolute;
     top: 8.5vh;
     right: 0;
-    width: 80%;
+    width: calc(100% - 280px);
     height: 83vh;
     background-color: blueviolet;
 }
@@ -68,7 +162,7 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 8.5vw;
+    height: 8.5vh;
     width: 100%;
     background-color: blue;
 }
