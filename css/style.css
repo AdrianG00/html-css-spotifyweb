@@ -22,17 +22,27 @@ ul{
 a{
     text-decoration: none;
 }
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
 
 
 /* Navigation bar  */
-nav .menu-container{
+nav{
+    position: relative;
+    height: 91.5vh;
+    background-color: black;
+    overflow-y: hidden;
+    width: 280px;
+}
+nav .menu-container-top{
     position: fixed;
-    display: flex;
     flex-direction: column;
     padding-left: 2em;
     padding-top: 2.4em;
-  
-    width: 280px;
+    overflow-y: hidden;
     background-color: black;
     color: grey;
 }
@@ -61,7 +71,7 @@ nav .menu-container{
     height: auto;
     vertical-align: middle;
 }
-.menu-button ul li{
+.menu-button li{
     padding-bottom: 1rem;
 }
 
@@ -71,7 +81,7 @@ nav .menu-container{
     font-size: 1.2rem;
     font-weight: 600;
     color: gray;
-
+    overflow-y: auto;
 }
 .menu-playlist h1{
     font-size: 1.6rem;
@@ -82,7 +92,6 @@ nav .menu-container{
 .menu-playlist button{
     background-color: grey;
     width: 45px;
-    height: 45px;
     font-size: 4rem;
     text-align: center;
     border: none;
@@ -96,13 +105,13 @@ nav .menu-container{
     padding-top: 2em;
 }
 .menu-playlist ul{
-    overflow: auto;
+    height: 200px;
+    overflow-y: auto;
 }
 
 /* Menu Profile */
 .menu-profile{
     color: grey;
-    align-self: flex-start;
     font-size: 1.2rem;
     width: 80%;
 }
@@ -110,7 +119,7 @@ nav .menu-container{
  margin: 1rem 0rem;
 }
 .menu-profile #download{
-    padding-top: 16rem;
+   
 }
 .menu-profile #download i{
     border: 1px solid grey;
@@ -131,20 +140,45 @@ nav .menu-container{
     background-color: rgba(128, 128, 128, 0.664);
     border-radius: 50%;
 }
-
+.menu-container-bottom{
+    padding-left: 2em;
+    width: 280px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+}
 
 
 
 
 /* Header */
 header{
-    position: absolute;
+    z-index: 1;
+    position: fixed;
     top: 0;
     right: 0;
     width: calc(100% - 280px);
-    height: 8.5vh;
-    background-color: aquamarine;
+    height: 100px; 
+    background-color: rgba(10, 13, 20, 1);
 }
+.header-upgrade{
+    text-align: right;
+    line-height: 100px
+}
+.header-upgrade a{
+    margin-right: 0.5rem;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    border-radius: 20px;
+}
+
+
+
 
 /* Main */
 main{
@@ -152,8 +186,11 @@ main{
     top: 8.5vh;
     right: 0;
     width: calc(100% - 280px);
-    height: 83vh;
-    background-color: blueviolet;
+    height: calc(100% - 17vh);
+    background-color: rgba(20, 25, 34, 1);
+    overflow: auto;
+    color: white;
+    font-size: 3em;
 }
 
 /* Footer */
@@ -164,5 +201,5 @@ footer{
     left: 0;
     height: 8.5vh;
     width: 100%;
-    background-color: blue;
+    background-color: rgba(40, 40, 40, 1);
 }
