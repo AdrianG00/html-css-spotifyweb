@@ -49,6 +49,14 @@ nav .menu-container-top{
     background-color: black;
     color: rgba(110, 113, 118, 1);
 }
+.pad2{
+    padding: 2rem;
+}
+.rad{
+    border-radius: 50% ;
+}
+
+
 
 /* Menu logo */
 .menu-logo{
@@ -196,6 +204,25 @@ main{
     overflow: auto;
     color: rgba(110, 113, 118, 1);
 }
+main section h1{
+    padding: 1.5rem 0rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: white;
+}
+main section h2{
+    color: white;
+}
+main section h3{
+    padding-bottom: 1rem;
+}
+main .album-container{
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; 
+}
+
 /* Main Bar */
 .main-bar{
     font-size:1.3rem;
@@ -205,36 +232,20 @@ main{
 .main-bar a{
     text-transform: uppercase;
     padding-right: 1.5rem;
-
-}
-/* Main recent */
-.main-recent{
-    padding: 2rem ;
-}
-.main-recent h1{
-    padding: 2rem 0rem;
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: white;
-}
-.main-album-container{
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-   
-   
+    padding-bottom: 2rem;
 }
 .main-album{
     width: calc(100%/6 - 1rem);
     margin-right: 1rem;
 }
+.main-album h2{
+    padding-bottom: 0.8rem;
+    width: 99%;
+}
 .main-album img{
     width: 100%;
     height: auto;
-}
-.main-album h2{
-    padding: 1rem 0rem;
-    color: white;
+    padding-bottom: 0.8rem;
 }
 .main-album div{
     color: rgba(110, 113, 118, 1);
@@ -252,6 +263,7 @@ main{
         width: calc(100%/2 - 1rem);
     }
 }
+/* Main personal */
 
 
 
