@@ -74,16 +74,25 @@ nav .menu-container-top{
     font-weight: 600;
     color: rgba(110, 113, 118, 1);
 }
-.menu-button ul li a{
+.menu-button ul a{
     color: inherit;
 }
-.menu-button ul li a img{
+.menu-button ul img{
     width: 3.5rem;
     height: auto;
     vertical-align: middle;
+    opacity: 0.7;
 }
 .menu-button li{
     padding-bottom: 1rem;
+}
+/* menu button hover */
+.menu-button li :hover{
+    color: white;
+
+}
+.menu-button li :hover > img{
+    opacity: 1;
 }
 
 /* Menu Playlist */
@@ -101,7 +110,10 @@ nav .menu-container-top{
     color: white;
     padding-bottom: 1rem;
 }
-.menu-playlist button{
+.menu-playlist-button{
+    cursor: pointer;
+}
+.menu-playlist-button button{
     background-color: grey;
     width: 45px;
     font-size: 4rem;
@@ -110,49 +122,30 @@ nav .menu-container-top{
     vertical-align: middle;
     margin-right: 1rem;
 }
-.menu-playlist span{
+.menu-playlist-button span{
     font-size: 1.6rem;
 }
 .menu-playlist ul li{
     padding-top: 2em;
 }
 .menu-playlist ul{
-    height: 250px;
+    height: 25rem;
     overflow-y: auto;
     width: 100%;
 }
+/* menu playlist hover */
+.menu-playlist-button:hover > span{
+    color: white;
+ 
+}
+.menu-playlist-button:hover > button{
+    background-color: white;
+}
+.menu-playlist li :hover{
+    color: white;
+}
 
 /* Menu Profile */
-.menu-profile{
-    color: rgba(110, 113, 118, 1);
-    font-size: 1.2rem;
-    width: 80%;
-}
-.menu-profile hr{
- margin: 1rem 0rem;
-}
-.menu-profile #download{
-   
-}
-.menu-profile #download i{
-    border: 1px solid grey;
-    border-radius: 50%;
-    font-size: 1rem;
-    padding: 0.3rem;
-    margin-right: 1em;
-}
-
-.menu-profile #profile{
-    color: white;
-    padding: 1rem 0em;
-}
-.menu-profile #profile img{
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-    background-color: rgba(128, 128, 128, 0.664);
-    border-radius: 50%;
-}
 .menu-container-bottom{
     padding-left: 2em;
     width: 280px;
@@ -161,7 +154,44 @@ nav .menu-container-top{
     left: 0;
     background-color: black;
 }
-
+.menu-profile{
+    color: rgba(110, 113, 118, 1);
+    font-size: 1.2rem;
+    width: 80%;
+}
+.menu-profile hr{
+ margin: 1rem 0rem;
+ border-color: rgba(110, 113, 118, 0.9);
+}
+.menu-profile #download i{
+    border: 1px solid grey;
+    border-radius: 50%;
+    font-size: 1rem;
+    padding: 0.3rem;
+    margin-right: 1em;
+    cursor: pointer;
+}
+.menu-profile #profile{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    padding: 1rem 0em;
+}
+#profile span{
+    padding-left: 0.6rem;
+}
+#profile img{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    background-color: rgba(128, 128, 128, 0.664);
+    border-radius: 50%;
+}
+/* menu bottom hover */
+#download:hover{
+    color: white;
+    border-color: white;
+}
 
 
 
@@ -378,7 +408,13 @@ footer{
     border-bottom: 5px solid lightgray;
     max-width: 40%;
 }
-
+/* footer center hover */ 
+.big-line:hover > .big-line:after {
+    content: '';
+    display: block;
+    border-bottom: 5px solid lightgray;
+    max-width: 40%;
+}
 
 
 
@@ -407,13 +443,20 @@ footer{
     font-size: 1rem;
 }
 .footer-right-button{
+    display: flex;
+    align-items: center;
+    justify-content: none;
+    flex-wrap: wrap;
     padding-left: 4rem;
     font-size: 1.4rem;
     color: lightgrey;
-    line-height: 100px; 
 }
 .footer-right-button i{
     padding-left: 0.5rem;
+}
+/* footer side left hover */
+.footer-right-button i:hover {
+    color: white;
 }
 
 /* Footer side right */
@@ -445,3 +488,4 @@ footer{
     border-bottom: 5px solid lightgray;
     max-width: 20%;
 }
+
