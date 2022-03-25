@@ -56,14 +56,15 @@ nav .menu-container-top{
     border-radius: 50% ;
 }
 
-
-
 /* Menu logo */
 .menu-logo{
     padding-bottom: 2.4em;
 
 }
-.menu-logo img{
+.menu-small-logo{
+    display: none;
+}
+.menu-large-logo{
     width: 200px;
     height: auto;
 }
@@ -176,6 +177,7 @@ nav .menu-container-top{
     font-weight: bold;
     color: white;
     padding: 1rem 0em;
+    
 }
 #profile span{
     padding-left: 0.6rem;
@@ -192,7 +194,43 @@ nav .menu-container-top{
     color: white;
     border-color: white;
 }
+/* Menu medfia screen */
+@media screen  and (max-width:550px) {
+   
+    nav{
+        margin: 0;
+        padding: 0;
+        width: 60px;
 
+    }
+    .menu-large-logo{
+       display: none;
+    }
+    .menu-small-logo{
+        display: inline-block;
+        width: 30px;
+        height: auto;
+    }
+    .menu-button span{
+        display:none
+    }
+    .menu-playlist{  
+        text-align: center;
+        display: none;
+    }
+    .menu-profile span, .menu-profile hr{
+        display: none;
+    }
+    .menu-container-bottom{
+        width: auto;
+        text-align: center;    
+    }
+    nav .menu-container-top{
+        padding-left: 1rem;
+        width: auto;
+        text-align: center;
+    }
+}
 
 
 /* Header */
@@ -319,6 +357,14 @@ main .album-container{
         width: calc(100%/2 - 1rem);
     }
 }
+@media screen  and (max-width:550px){
+    main, header{
+       width:calc(100% - 60px); 
+    }
+
+}
+
+
 /* Main  album hover */
 .main-album-cover i{
     position: absolute;
@@ -528,4 +574,28 @@ footer{
 }
 .footer-line-container:hover .footer-pointer-right{
     display: inline-block;
+}
+/* footer media screen */
+@media screen  and (max-width:700px) {
+
+     .footer-right-button{
+
+         padding-left: 0rem;
+         line-height: 100px;
+         flex-direction: column;
+         justify-content: center;
+
+     }
+     .footer-side-right{
+        text-align: left;
+     }
+     .footer-line-container{
+         width: 70px;
+     }
+     .footer-center-up{
+         font-size: 1.5rem;
+     }
+     #footer-play{
+         font-size: 2.8rem;
+     }
 }
